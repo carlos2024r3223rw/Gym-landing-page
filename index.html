@@ -8,9 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=forja-1">
 </head>
 <body>
+<svg class="icon-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-bolt" viewBox="0 0 24 24"><path d="m13 2-9 11h7l-1 9 10-12h-7V2Z"/></symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="icon-trend" viewBox="0 0 24 24"><path d="M3 18 9 12l4 4 8-9M15 7h6v6"/></symbol>
+  <symbol id="icon-weight" viewBox="0 0 24 24"><path d="M3 8v8M6 6v12M9 10h6M18 6v12M21 8v8"/></symbol>
+  <symbol id="icon-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M2 20v-2a6 6 0 0 1 12 0v2M15 15a5 5 0 0 1 7 4v1"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6 3h3l1.5 4-2 2a16 16 0 0 0 6.5 6.5l2-2L21 15v3a3 3 0 0 1-3 3C9.7 21 3 14.3 3 6a3 3 0 0 1 3-3Z"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></symbol>
+  <symbol id="icon-glove" viewBox="0 0 24 24"><path d="M8 5a4 4 0 0 1 8 0v2h2a3 3 0 0 1 3 3v4a8 8 0 0 1-8 8H9a6 6 0 0 1-6-6v-5a3 3 0 0 1 3-3h2V5Z"/></symbol>
+  <symbol id="icon-flame" viewBox="0 0 24 24"><path d="M12 22c5 0 8-3 8-8 0-4-2-7-5-10 0 4-2 5-3 6-1-3-2-5-4-7C8 8 4 10 4 15c0 4 3 7 8 7Z"/></symbol>
+</svg>
 
 <!-- ============ HEADER / NAV ============ -->
 <header class="site-header" id="siteHeader">
@@ -27,6 +41,10 @@
         <li><a href="#contacto">CONTACTO</a></li>
       </ul>
       <div class="nav__cta">
+        <div class="language-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="language-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="language-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+        </div>
         <a href="#clase-gratis" class="btn btn--neon btn--sm" id="navCtaBtn">CLASE GRATIS</a>
         <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
           <span></span><span></span><span></span>
@@ -50,7 +68,7 @@
     <div class="hero__content">
       <div class="hero__glitch-badge">
         <span class="badge-pulse"></span>
-        <span>⚡ INSCRIPCIONES ABIERTAS — CUPOS LIMITADOS</span>
+        <span>INSCRIPCIONES ABIERTAS — CUPOS LIMITADOS</span>
       </div>
 
       <h1 class="hero__title glitch" data-text="ROMPE TUS LÍMITES.">
@@ -61,7 +79,7 @@
 
       <div class="hero__actions">
         <a href="#clase-gratis" class="btn btn--neon btn--lg btn--pulse" id="heroCtaBtn">
-          ⚡ PRUEBA UNA CLASE GRATIS
+          PRUEBA UNA CLASE GRATIS
         </a>
         <a href="#planes" class="btn btn--ghost btn--lg">
           VER PLANES →
@@ -149,28 +167,28 @@
       <p class="about__text">FORJA nació de la idea de que el entrenamiento real no ocurre en máquinas de espejo. Aquí levantamos barras, tiramos golpes y sudamos juntos. Sin egos, sin excusas.</p>
       <div class="about__features">
         <div class="about__feature">
-          <span class="about__feature-icon">⚔️</span>
+          <span class="about__feature-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-target"></use></svg></span>
           <div>
             <strong>COACHES CERTIFICADOS</strong>
             <p>Competidores activos y exatletas profesionales.</p>
           </div>
         </div>
         <div class="about__feature">
-          <span class="about__feature-icon">🔥</span>
+          <span class="about__feature-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-flame"></use></svg></span>
           <div>
             <strong>METODOLOGÍA PROGRESIVA</strong>
             <p>Programación periódica que evoluciona contigo.</p>
           </div>
         </div>
         <div class="about__feature">
-          <span class="about__feature-icon">🏋️</span>
+          <span class="about__feature-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-weight"></use></svg></span>
           <div>
             <strong>EQUIPO DE COMPETICIÓN</strong>
             <p>Rogue, Assault, Concept2 — solo lo mejor.</p>
           </div>
         </div>
         <div class="about__feature">
-          <span class="about__feature-icon">🤝</span>
+          <span class="about__feature-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-people"></use></svg></span>
           <div>
             <strong>COMUNIDAD BRUTAL</strong>
             <p>Más que compañeros, familia que se empuja al límite.</p>
@@ -233,7 +251,7 @@
             <option value="strength">FUERZA</option>
           </select>
         </div>
-        <button class="btn btn--neon btn--lg calc__btn" id="calcBtn">⚡ CALCULAR</button>
+        <button class="btn btn--neon btn--lg calc__btn" id="calcBtn">CALCULAR</button>
       </div>
       <div class="calc__result" id="calcResult">
         <div class="calc__result-inner">
@@ -285,17 +303,12 @@
       <h2 class="cta__title">TU PRIMERA CLASE<br><span class="neon-text neon-text--xl">ES GRATIS.</span></h2>
       <p>Sin compromiso. Sin excusas. Ven, entrena y decide si FORJA es para ti. <strong>Spoiler: lo es.</strong></p>
       <div class="cta-actions">
-        <a href="#" class="btn btn--neon btn--xl whatsapp-btn" data-wa-msg="¡Quiero probar mi clase GRATIS en FORJA! 🔥">
-          ⚡ RESERVAR MI CLASE GRATIS
-        </a>
-        <a href="tel:+50322000000" class="btn btn--ghost btn--xl" id="ctaPhoneBtn">
-          📞 LLAMAR AHORA
-        </a>
+        <button type="button" class="btn btn--neon btn--xl booking-trigger" id="reserveBtn">RESERVAR MI CLASE GRATIS</button>
       </div>
       <div class="cta-trust">
-        <span>✅ Sin compromiso</span>
-        <span>🕐 Respuesta inmediata</span>
-        <span>🔥 Cupos limitados</span>
+        <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg> Sin compromiso</span>
+        <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-clock"></use></svg> Respuesta inmediata</span>
+        <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-flame"></use></svg> Cupos limitados</span>
       </div>
     </div>
   </div>
@@ -310,22 +323,22 @@
     </div>
     <div class="contact-grid reveal">
       <div class="contact-card">
-        <span class="contact-card__icon">📍</span>
+        <span class="contact-card__icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-pin"></use></svg></span>
         <h3>UBICACIÓN</h3>
         <p>Boulevard de los Héroes #456<br>San Salvador, El Salvador</p>
       </div>
       <div class="contact-card">
-        <span class="contact-card__icon">🕐</span>
+        <span class="contact-card__icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-clock"></use></svg></span>
         <h3>HORARIOS</h3>
         <p>Lun - Vie: 6:00 AM – 10:00 PM<br>Sábados: 7:00 AM – 2:00 PM</p>
       </div>
       <div class="contact-card">
-        <span class="contact-card__icon">📞</span>
+        <span class="contact-card__icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-phone"></use></svg></span>
         <h3>CONTACTO</h3>
         <p>+503 2200-0000<br>WhatsApp: +503 7000-0000</p>
       </div>
       <div class="contact-card">
-        <span class="contact-card__icon">📧</span>
+        <span class="contact-card__icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-mail"></use></svg></span>
         <h3>EMAIL</h3>
         <p>info@forja.com.sv<br>clases@forja.com.sv</p>
       </div>
@@ -373,8 +386,8 @@
       <div class="footer__col">
         <h4>CONTACTO</h4>
         <ul>
-          <li><a href="#" class="whatsapp-btn" data-wa-msg="Hola, quiero info sobre FORJA.">WhatsApp</a></li>
-          <li><a href="tel:+50322000000">+503 2200-0000</a></li>
+          <li><a href="#clase-gratis">Reserva demo</a></li>
+          <li><span>+503 2200-0000</span></li>
           <li><a href="mailto:info@forja.com.sv">info@forja.com.sv</a></li>
         </ul>
       </div>
@@ -389,12 +402,49 @@
 <!-- ============ STICKY MOBILE CTA ============ -->
 <div class="sticky-cta" id="stickyCta">
   <div class="sticky-cta__text">
-    <strong>⚡ ¿LISTO PARA LA FORJA?</strong>
+    <strong>¿LISTO PARA LA FORJA?</strong>
     <span>Primera clase GRATIS</span>
   </div>
-  <a href="#" class="btn btn--neon btn--sm whatsapp-btn" data-wa-msg="¡Quiero probar mi clase GRATIS en FORJA! 🔥">RESERVAR</a>
+  <button type="button" class="btn btn--neon btn--sm booking-trigger">RESERVAR</button>
 </div>
 
-<script src="script.js" defer></script>
+<dialog class="booking-dialog" id="bookingDialog" aria-labelledby="bookingTitle">
+  <div class="booking-dialog__head">
+    <div>
+      <span class="section__tag">// FORJA DEMO</span>
+      <h2 id="bookingTitle">RESERVA TU CLASE</h2>
+    </div>
+    <button type="button" class="booking-dialog__close" aria-label="Cerrar reserva">×</button>
+  </div>
+  <form id="bookingForm" class="booking-form">
+    <p>Elige una disciplina y un horario para probar la reserva.</p>
+    <label for="bookingDiscipline">DISCIPLINA</label>
+    <select id="bookingDiscipline" required>
+      <option value="" disabled selected>Selecciona una disciplina</option>
+      <option value="Crossfit">Crossfit</option><option value="MMA">MMA</option>
+      <option value="Muay Thai">Muay Thai</option><option value="BJJ">BJJ</option>
+      <option value="Boxeo">Boxeo</option><option value="Fuerza">Fuerza</option>
+    </select>
+    <label for="bookingDate">FECHA</label>
+    <input id="bookingDate" type="date" required>
+    <label for="bookingTime">HORA</label>
+    <select id="bookingTime" required>
+      <option value="" disabled selected>Selecciona un horario</option>
+      <option value="06:00">06:00</option><option value="08:00">08:00</option>
+      <option value="18:00">18:00</option><option value="20:00">20:00</option>
+    </select>
+    <button type="submit" class="btn btn--neon btn--lg">CONFIRMAR RESERVA DEMO</button>
+    <small>No se envían datos ni se crea una reserva real.</small>
+  </form>
+  <div class="booking-success" id="bookingSuccess" hidden aria-live="polite">
+    <div class="booking-success__mark"><svg class="ui-icon" aria-hidden="true"><use href="#icon-check"></use></svg></div>
+    <h3>RESERVA SIMULADA</h3>
+    <p id="bookingSummary"></p>
+    <p>No se ha enviado ninguna solicitud al gimnasio.</p>
+    <button type="button" class="btn btn--neon btn--lg booking-done">CERRAR</button>
+  </div>
+</dialog>
+
+<script src="script.js?v=forja-1" defer></script>
 </body>
 </html>
