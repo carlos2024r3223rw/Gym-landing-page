@@ -1152,3 +1152,135 @@ h1, h2, h3 {
   html { scroll-behavior: auto; }
   .glitch::before, .glitch::after { display: none; }
 }
+
+/* Language control and vector icon system */
+.icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  vertical-align: -.12em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nav__row { gap: 20px; }
+.nav__links { margin-left: auto; }
+.nav__cta { flex: 0 0 auto; flex-wrap: nowrap; gap: 12px; }
+.language-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(var(--neon-rgb),.24);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.language-btn {
+  min-width: 34px;
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-gray);
+  font: 700 .76rem var(--font-condensed);
+  letter-spacing: .08em;
+  cursor: pointer;
+}
+.language-btn.is-active { background: var(--neon); color: #0a0a0c; }
+.language-btn:focus-visible,
+.booking-dialog button:focus-visible,
+.booking-dialog select:focus-visible,
+.booking-dialog input:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+.disc-card__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  color: var(--neon);
+  background: rgba(var(--neon-rgb),.07);
+  border: 1px solid rgba(var(--neon-rgb),.25);
+  border-radius: 10px;
+}
+.disc-card__icon .ui-icon { width: 30px; height: 30px; }
+.about__feature-icon,
+.contact-card__icon { color: var(--neon); }
+.about__feature-icon .ui-icon { width: 1.5rem; height: 1.5rem; }
+.contact-card__icon .ui-icon { width: 1.8rem; height: 1.8rem; }
+.cta-trust .ui-icon { width: .95rem; height: .95rem; margin-right: 4px; }
+
+/* Local demo booking */
+.booking-dialog {
+  width: min(490px, calc(100% - 28px));
+  max-height: min(680px, calc(100vh - 28px));
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  color: var(--text-white);
+  background: #111115;
+  border: 1px solid rgba(var(--neon-rgb),.35);
+  border-radius: 12px;
+  box-shadow: 0 20px 80px rgba(0,0,0,.7), 0 0 40px rgba(var(--neon-rgb),.08);
+}
+.booking-dialog::backdrop { background: rgba(0,0,0,.78); backdrop-filter: blur(5px); }
+.booking-dialog__head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 30px 18px;
+  border-bottom: 1px solid var(--border-hover);
+}
+.booking-dialog__head h2 { margin: 8px 0 0; font: 2.2rem/1 var(--font-display); letter-spacing: .06em; }
+.booking-dialog__close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-hover);
+  border-radius: 50%;
+  background: var(--bg-card-hover);
+  color: var(--text-white);
+  font: 1.5rem/1 var(--font-body);
+  cursor: pointer;
+}
+.booking-form, .booking-success { display: flex; flex-direction: column; gap: 12px; padding: 26px 30px 30px; }
+.booking-form > p, .booking-success p { margin: 0 0 10px; color: var(--text-gray); line-height: 1.5; }
+.booking-form label { font: 700 .8rem var(--font-condensed); letter-spacing: .1em; color: var(--neon); }
+.booking-form select, .booking-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 6px;
+  background: #202026;
+  color: var(--text-white);
+  color-scheme: dark;
+  font: 500 1rem var(--font-body);
+}
+.booking-form .btn, .booking-success .btn { width: 100%; margin-top: 8px; }
+.booking-form small { color: var(--text-gray); line-height: 1.5; text-align: center; }
+.booking-success__mark { color: var(--neon); font-size: 2.6rem; line-height: 1; }
+.booking-success h3 { margin: 0; font: 2rem var(--font-display); color: var(--neon); }
+.booking-dialog [hidden] { display: none !important; }
+
+@media (max-width: 560px) {
+  .nav__row { gap: 10px; }
+  .nav__cta { gap: 10px; }
+  .language-btn { min-width: 31px; }
+  .booking-dialog__head { padding: 22px 20px 16px; }
+  .booking-form, .booking-success { padding: 22px 20px 24px; }
+}
